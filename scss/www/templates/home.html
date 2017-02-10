@@ -1,0 +1,19 @@
+<ion-view title="Home" id="page5" style="background-color:#7BD2F0;">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="home-card21" ng-repeat="post in posts" ng-controller="homeCtrl" ng-app>
+      <ion-item class="item-avatar" id="home-list-item3">
+      <img ng-src="{{ post.avatar }}">
+        <h2>{{post.name}}</h2>
+         <img ng-src="{{post.img}}" width="396" height="216">
+        </ion-item>
+       <button ng-click="likeClick()" ng-init="likeCount = x.like" id="home-button1" class="button button-light  icon ion-ios-heart-outline"> {{ likeCount }}</button>
+        <button id="home-button2" class="button button-light  icon ion-android-chat" ui-sref="tabsController.comments({id: {{post.id}}})" ></button>
+        <ion-input placeholder="comment here" focus></ion-input>
+        <div class="list card" id="home-card24" >
+        <!--<ion-item class="item-avatar" id="home-list-item11" >
+          <h2> <img ng-src="{{post.cmimg}}" width="50" height="50">   {{post.comment}}</h2>
+          </ion-item>-->
+          </div>
+      </div>
+      </ion-content>
+</ion-view>

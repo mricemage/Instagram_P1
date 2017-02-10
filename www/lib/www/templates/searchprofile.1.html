@@ -1,0 +1,13 @@
+<ion-view title="Profile" id="page6">
+  <ion-content padding="true" class="has-header">
+    <ion-list id="profile-list7" ng-repeat="user in userList">
+      <ion-item class="item-avatar balanced" id="profile-list-item18">
+        <img ng-src="{{user.picture}}">
+        <h2balanced>{{user.name}}</h2balanced>
+      </ion-item>
+      <label class="item item-input" id="profile-textarea1" name="caption">
+        <span class="input-label">This is my details and bio</span><textarea placeholder=""></textarea></label>
+    </ion-list>
+   
+  </ion-content>
+</ion-view>

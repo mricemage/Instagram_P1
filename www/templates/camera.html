@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<style>
+.center {
+  text-align:center;
+}
+
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+  <body ng-controller="cameraCtrl" >
+    <ion-content>
+    <img ng-show="picture !== undefined" ng-src="{{picture}}" width="300" height="300" style="display:block; margin:auto;">
+    <img ng-show="picture === undefined" ng-src="http://placehold.it/300x300" style="display:block; margin:auto; ">
+    <br><br><br><br><br>
+    <button class="button button-balanced" style="float:left; margin-left: 18%;" ng-click="takePhoto()">Take Picture</button>
+    <button class="button button-balanced" style="margin-left: 5%;" ng-click="choosePhoto()">Choose Picture</button>
+    <br><br><br>
+    <button class="button button-full button-balanced"  ng-click="confirmPost()">Confirm</button>
+    
+</ion-content>
+
+  </body>
+</html>

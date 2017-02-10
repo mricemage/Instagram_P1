@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<style>
+.center {
+  text-align:center;
+}
+
+
+</style>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+
+  <body ng-controller="cameraCtrl" >
+    <ion-content>
+    <img ng-show="picture !== undefined" ng-src="{{picture}}" width="300" height="300" style="display:block; margin:auto;">
+    <img ng-show="picture === undefined" ng-src="http://placehold.it/300x300" style="display:block; margin:auto; ">
+    <br>
+    
+    
+   
+    <ion-item ng-controller="PostConfirmCtrl"  >
+    <ion-item class="item-avatar" id="home-list-item3" ng-repeat="post in profile">
+    <img ng-src="{{ profile[0].avatar }}">
+    <input type="text" placeholder="Write something here..." ng-model="caption">
+    <button class="button button-full button-balanced"  ng-click="confirmPost(caption)">Post</button>
+    </ion-item></ion-item>
+
+
+  </body>
+</html>

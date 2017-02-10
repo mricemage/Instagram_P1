@@ -1,0 +1,18 @@
+<ion-view title="Home" id="page5" style="background-color:#7BD2F0;">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="home-card21" ng-repeat="x in user" ng-controller="homeCtrl" ng-app>
+      <ion-item class="item-avatar" id="home-list-item3">
+      <img ng-src="{{ x.userprofileimage }}">
+        <h2>{{x.name}}</h2>
+      </ion-item>
+      <img src="{{x.userimage}}" width="396" height="216">
+       <button ng-click="likeClick()" ng-init="likeCount = x.like" id="home-button1" class="button button-light  icon ion-ios-heart-outline"> {{ likeCount }}</button>
+        <button id="home-button2" class="button button-light  icon ion-android-chat"></button>
+        <div class="list card" id="home-card24">
+        <ion-item class="item-avatar" id="home-list-item11" >
+          <h2>Comment line here</h2>
+          </ion-item>
+          </div>
+      </div>
+      </ion-content>
+</ion-view>

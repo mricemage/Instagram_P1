@@ -1,0 +1,16 @@
+<ion-view title="List Comments" id="page9">
+  <ion-content padding="true" class="has-header">
+    <div class="list card" id="home-card21" ng-repeat="post in posts.comment" ng-controller="commentsCtrl" ng-app>
+        <ion-item class="item-avatar balanced" id="home-list-item11" >
+          <img ng-src="{{post.user.avatar}}">
+              <h2>{{post.user.name}}</h2>
+              <h2>{{post.content}}</h2>
+          </ion-item>
+          </div>
+         <div class="padding">
+                         <input type="text" placeholder="Type your comment" ng-model="content">
+          <button type="submit" class="button button-block button-positive" ng-click="saveChanges(content)">Comment</button>
+        </div>
+   
+  </ion-content>
+</ion-view>

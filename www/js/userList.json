@@ -1,0 +1,21 @@
+[
+{"id": 1,
+ "name": "Pham Huong",
+ "picture": "img/img1.jpg"},
+ {"id": 2,
+ "name": "Boe Pham",
+ "picture": "img/img2.jpg"},
+ {"id": 3,
+ "name": "Smith Wesley",
+ "picture": "img/img3.jpg"},
+ {"id": 4,
+ "name": "Jane Ionic",
+ "picture": "img/img4.jpg"},
+ {"id": 5,
+ "name": "Lasse Khoai",
+ "picture": "img/img5.jpg"},
+ {"id": 6,
+ "name": "Thang Minh",
+ "picture": "img/img1.jpg"}
+
+]
