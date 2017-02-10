@@ -73,7 +73,7 @@ return [
         bio: "So I just started Instagram. But be warned! I will take pictures of funny and maybe disturbing contents of things. Follow me if you dare! Or you can just follow me to make me feel cool",
         email: "boe.pham@bee.com",
         mobile: "013583644",
-        posts: "2",
+        posts: "1",
         followers: "77",
         following: "235"
     }

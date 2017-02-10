@@ -120,15 +120,17 @@ $scope.user = allPerson[i];
 .controller('profileCtrl', ['$scope', '$stateParams', 'Personal','DataServices',
 function ($scope, $stateParams, Personal, DataServices) {
 $scope.user = Personal;
+
 var postsArray = DataServices;
 
 
+
 $scope.post = {};
-for(var i = 0; i < 2; i++) // 2 o day se tuong duong voi chieu dai cua databse posts{
+for(var i = 0; i < 1; i++) // 2 o day se tuong duong voi chieu dai cua databse posts{
 {
 if($scope.user.id == postsArray[i].user.id ) { //id user trong 1 bai post){ 
 	$scope.post = postsArray[i]; //post se bang url cua nhung buc hinh ma admin da dang tai 
-	console.log($scope.user.id);
+	
 }
 }
 
