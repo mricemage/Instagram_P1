@@ -10,11 +10,11 @@ function ($scope, $stateParams, DataService) {
 
 }])
       
-	.controller('homeCtrl', ['$scope', '$stateParams', 'DataService', '$state','$q', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
+	.controller('homeCtrl', ['$scope', '$stateParams', 'DataService', '$state','$q', 'DataServices', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams,  DataService, $state, $q) {
-
+function ($scope, $stateParams,  DataService, $state, $q, DataServices) {
+	
 	$scope.$on('$ionicView.enter', function(){
 		DataService.getHome().then(function(home)
 			{
@@ -24,7 +24,7 @@ function ($scope, $stateParams,  DataService, $state, $q) {
 		);
 	});
 
- // $scope.posts = DataService; Xóa dòng này vì đã có lệnh (3)
+ 	$scope.otherposts = DataServices;
 	var hasLiked = false;
 	 $scope.class = "button button-light  icon ion-ios-heart-outline";
 	 $scope.likeClick = function() {

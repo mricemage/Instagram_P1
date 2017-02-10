@@ -33,9 +33,9 @@ return [
             name: "Pham Huong",
             avatar: "img/img1.jpg"
         },
-        img: "img/img2.jpg",
+        img: "img/geralt_image.jpg",
         like: 3,
-        caption: "Stay classy",
+        caption: "Sorrow of the year",
         comment:[
             {
                 id: 0,
@@ -56,78 +56,8 @@ return [
                 content: "Doe moe"
             }
         ]
-    },
-    //bai post thu hai gom 1 comment cua user 4
-
-     {
-         id: 1,
-         user:{
-             id: 2,
-             name: "Boe Nguyen",
-             avatar: "img/img7.jpg"
-         },
-         img: "img/img3.jpg",
-         like: 8,
-         caption: "Words cannot express my love & passion",
-         comment:[
-             {
-                 id: 0,
-                 user:{
-                     id: 4,
-                     name: "Thang Ho",
-                     avatar: "img/img6.jpg"
-                 },
-                 content: "SML moe chuminga"
-             }
-         ]
-     },
-      //bai post thu ba gom 2 comment cua user 1 va 5
-     {
-         id: 2,
-         user:{
-             id: 3,
-             name: "Smith Wesley",
-             avatar: "img/img5.jpg"
-         },
-         img: "img/img8.jpg",
-         like: 2,
-         caption: "You’re cute, can I have you?",
-         comment:[
-             {
-                 id: 0,
-                 user:{
-                     id: 1,
-                     name: "Pham Huong",
-                     avatar: "img/img1.jpg"
-                 },
-                 content:"Oh, Bonny not gonna like this"
-             },
-             {
-                 id: 1,
-                 user:{
-                     id: 5,
-                     name: "Jane Ionic",
-                     avatar: "img/img9.jpg"
-                 },
-                 content: "Oops"
-             }
-         ]
-     },
-      //bai post thu tu gom 0 comment 
-     {
-         id: 3,
-         user:{
-             id: 4,
-             name: "Thangg Ho",
-             avatar: "img/img6.jpg"
-         },
-         img: "img/img10.jpg",
-         like: 9,
-         caption: "Today I have a good memory",
-         comment:[]
-         
-     }
-
+    }
+    
     
     ];
 

@@ -64,12 +64,23 @@
 });	
 })
 
-.controller('PostConfirmCtrl', ['$scope', 'DataService', 'Personal', '$rootScope', '$state', function($scope, DataService, Personal, $rootScope, $state) {
+.controller('PostConfirmCtrl', ['$scope', 'DataService', 'Personal', '$rootScope', '$state', '$q', 'DataServices', function($scope, DataService, Personal, $rootScope, $state, $q, DataServices) {
+    
+    // $scope.$on('$ionicView.enter', function($scope){
+	// 	DataService.getHome().then(function(home)
+	// 		{
+	// 			$scope.posts = home; //posts liên quan đến home.html [Đây là lệnh (3)]
+				
+	// 		}
+	// 	);
+	// });
+    
     var profile = Personal;
-    var data = DataService;
+    var data = DataServices;
+    console.log(data);
     $scope.confirmPost = function(caption) {
-        data.push({
-            id: data.length,
+            data.push({
+            id: data.length+1,
             user: {
                 id: profile.id,
                 name: profile.name,
