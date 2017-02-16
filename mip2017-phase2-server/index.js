@@ -10,49 +10,73 @@ app.set('port', (process.env.PORT || 8200));
 app.use(bodyParser.json());
 app.use(cors());
 
-// Simple hello world route
+// Home loading
 
 
-// var posts = [
-//         {
-//             id: 0,
-//             user: {
-//                 id: 1,
-//                 username: "dtrump",
-//                 profileImageSmall: "http://core0.staticworld.net/images/article/2015/11/111915blog-donald-trump-100629006-primary.idge.jpg" 
-//             },                                                 
-//             image: "http://media1.fdncms.com/sacurrent/imager/u/original/2513252/donald_trump4.jpg",
-//             imageThumbnail: "http://media1.fdncms.com/sacurrent/imager/u/original/2513252/donald_trump4.jpg",
-//             likes: 892, 
-//             caption: "Always winning #elections",
-//             tags: ['elections'],         
-//             comments: [
-//                 {
-//                     id: 0,
-//                     user: {
-//                         id: 2,
-//                         username: "POTUS"
-//                     },                    
-//                     comment: "You're never going to make it don #losing",
-//                     userRefs: [],
-//                     tags: ["losing"]
-//                 },
-//                 {
-//                     id: 1,
-//                     user: {
-//                         id: 3,
-//                         username: "HillaryC"
-//                     },                    
-//                     comment: "Damn right @POTUS",
-//                     userRefs: ["POTUS"],
-//                     tags: []       
-//                 },
-//             ]
+var posts = [
+        {
+            id: 0,
+            user: {
+                id: 1,
+                username: "jasonstatham",
+                profileImageSmall: "http://www.students.oamk.fi/~t5homi00/images/jason.jpg" 
+            },                                                 
+            image: "http://www.students.oamk.fi/~t5homi00/images/jason1.jpg",
+            imageThumbnail: "http://www.students.oamk.fi/~t5homi00/images/jason1.jpg",
+            likes: 892, 
+            caption: "Prepare for my new movies!",
+            tags: ['mechanics'],         
+            comments: [
+                {
+                    id: 0,
+                    user: {
+                        id: 2,
+                        username: "selenagomez"
+                    },                    
+                    comment: "I am really hyped for that! #newStatham",
+                    userRefs: [],
+                    tags: ["newStatham"]
+                },
+                {
+                    id: 1,
+                    user: {
+                        id: 3,
+                        username: "edsheeran"
+                    },                    
+                    comment: "Me too @selenagomez",
+                    userRefs: ["selenagomez"],
+                    tags: []       
+                },
+            ]
 
-//         }
-//     ];
+        }
+    ];
 
-// Here is the database about username and password
+//Other users
+
+
+var otherUsers = [
+    {
+        id: 1,
+        username: "jasonstatham",
+        fullname: "Jason Statham",
+        profileImageSmall: "http://www.students.oamk.fi/~t5homi00/images/jason.jpg",
+    },
+    {
+        id: 2,
+        username: "selenagomez",
+        fullname: "Selena Gomez",
+        profileImageSmall: "http://www.students.oamk.fi/~t5homi00/images/selena.jpg"
+    },
+    {
+        id: 3,
+        username: "edsheeran",
+        fullname: "Ed Sheeran",
+        profileImageSmall: "http://www.students.oamk.fi/~t5homi00/images/edsheeran.jpg"
+    }
+]
+
+// Here is the database about username, password, profileImage, and name
 var users = [
     {
         id:"a9dm85",
@@ -60,13 +84,7 @@ var users = [
         password: "123456",
         name: "Jason Statham",
         profileimageSmall: "http://www.students.oamk.fi/~t5homi00/images/jason.jpg",
-        image: "http://www.students.oamk.fi/~t5homi00/images/jason1.jpg",
-        imageThumbnail: "",
-        likes: 23,
-        caption: "Prepare to watch my newest films!",
-        tags: ['New films'],
-        comments: []
-    }
+    }   
 ];
 
 app.get('/', function(req, res) {
@@ -105,22 +123,31 @@ app.get('/posts/:id', function(req, res) {
     res.json(posts[req.params.id]);
 });
 
+
+// Home Connection
+var following = function()
+{
+    return posts;
+}
+
+app.get('/posts', function (req, res) {
+    res.json ( following() );
+});
+
+
+
+
+// End of Home Connection
+app.listen(8200, function() {
+        console.log('Node app is running ');
+});
+
+
+
+
 // start listening for incoming HTTP connections
 // app.listen(app.get('port'), function() {
 //     console.log('Node app is running on port', app.get('port'));
 // });
 
-app.get('/home', function (req, res) {
-    res.json (getHome());
-});
-app.listen(8200, function() {
-        console.log('Node app is running ');
-    });
 
-
-// return 
-
-var getHome = function()
-{
-    return home;
-}

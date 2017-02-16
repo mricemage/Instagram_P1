@@ -1,6 +1,6 @@
 
-angular.module('someklone.config', []).constant('API_ENDPOINT', {
-        url: "http://localhost:8200/"
+angular.module('someklone.config', []).constant('appConfig', {
+        "apiAddr": "http://localhost:8200/"
 });
 
 // Declare the services module

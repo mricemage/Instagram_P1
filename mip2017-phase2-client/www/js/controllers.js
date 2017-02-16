@@ -1,9 +1,9 @@
 angular.module('someklone.controllers', [])
 
-.controller('HomeCtrl', function($scope, $state, Posts, $q) {
-    User.getHome().then(function(home)
+.controller('HomeCtrl', ['$scope', '$state', 'Posts', '$q', function($scope, $state, Posts, $q) {
+    Posts.following().then(function(data)
         {
-            $scope.posts = home;
+            $scope.posts = data;
         }
     );
 
@@ -16,7 +16,7 @@ angular.module('someklone.controllers', [])
     {
         $state.go('comment', { postId: post.id });
     }
-})
+}])
 
 .controller('BrowseCtrl', function($scope, $state) {
 

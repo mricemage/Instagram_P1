@@ -102,14 +102,14 @@ angular.module('someklone.services', ['someklone.config'])
     };
 })
 // This is the login part
-.factory('User', function($q, $http, API_ENDPOINT) {
+.factory('User', function($q, $http, appConfig) {
   
   var user = null;
 
   return {
     login: function(username, password) {
       return $q(function(resolve, reject){
-        $http.post(API_ENDPOINT.url + "login", { username: username, password: password}).then(function(result){
+        $http.post(appConfig.apiAddr + "login", { username: username, password: password}).then(function(result){
           if(result.status == 200)
           {
             user = { id: result.data.id, username: result.data.username };
