@@ -1,8 +1,5 @@
 
-angular.module('someklone.services', [])
-
-
-.factory('Posts', function($q, $http, appConfig) {
+angular.module('someklone.services').factory('Posts', function($q, $http, appConfig) {
 
     var posts = [];
 

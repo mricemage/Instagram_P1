@@ -1,7 +1,4 @@
-angular.module('someklone.services', ['someklone.config'])
-
-
-.factory('Users', function($q) {
+angular.module('someklone.services').factory('Users', function($q) {
 
     // var activeUser = {
     //         id: 1,
@@ -101,6 +98,7 @@ angular.module('someklone.services', ['someklone.config'])
 
     };
 })
+
 // This is the login part
 .factory('User', function($q, $http, appConfig) {
   

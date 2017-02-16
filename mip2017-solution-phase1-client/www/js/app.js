@@ -126,13 +126,14 @@ angular.module('someklone', ['ionic', 'someklone.controllers', 'someklone.servic
     controller: 'PostCommentCtrl'    
   })
 
-
   .state('login', {
     url: '/login',
     templateUrl: 'templates/login.html',
-    controller: 'LoginCtrl'
-  })
+    controller: 'LoginCtrl'    
+  });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
 
 });
+

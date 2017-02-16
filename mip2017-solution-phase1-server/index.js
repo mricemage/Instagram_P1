@@ -50,7 +50,7 @@ var posts = [
             ]
 
         }
-    ];
+    ]
 
 //Other users
 

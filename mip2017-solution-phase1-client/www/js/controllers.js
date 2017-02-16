@@ -1,6 +1,6 @@
 angular.module('someklone.controllers', [])
 
-.controller('HomeCtrl', ['$scope', '$state', 'Posts', '$q', function($scope, $state, Posts, $q) {
+.controller('HomeCtrl', function($scope, $state, Posts) {
     Posts.following().then(function(data)
         {
             $scope.posts = data;
@@ -9,14 +9,14 @@ angular.module('someklone.controllers', [])
 
     $scope.toggleLike = function(post)
     {
-        User.toggleLike(post);
+        Posts.toggleLike(post);
     }
 
     $scope.comment = function(post)
     {
         $state.go('comment', { postId: post.id });
     }
-}])
+})
 
 .controller('BrowseCtrl', function($scope, $state) {
 
